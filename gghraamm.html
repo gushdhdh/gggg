@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Team</title>
+    <style>
+        /* إعدادات الصفحة العامة */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* رمادي فاتح */
+            margin: 0;
+            padding: 0;
+            color: #333; /* رمادي غامق للنص */
+            overflow-x: hidden;
+        }
+
+        /* تصميم الهيدر والفوتر */
+        header, footer {
+            background-color: #4a4a4a; /* رمادي غامق */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #bcbcbc; /* رمادي فاتح */
+        }
+
+        /* تصميم القسم الرئيسي */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #4a4a4a; /* رمادي غامق */
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            color: #666; /* رمادي متوسط */
+            max-width: 700px;
+            margin: 20px 0;
+            line-height: 1.6;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero-section button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #4a4a4a; /* رمادي غامق */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeIn 2.5s ease;
+        }
+
+        .hero-section button:hover {
+            background-color: #6e6e6e; /* رمادي أفتح */
+            transform: scale(1.1);
+        }
+
+        .hero-section button:active {
+            transform: scale(0.95);
+        }
+
+        /* تأثيرات الرسوم */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        /* تأثير العائمة */
+        .floating {
+            position: relative;
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes floatAnimation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* تصميم قسم الفريق */
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #ffffff; /* أبيض */
+        }
+
+        .about-section h1 {
+            font-size: 3em;
+            color: #4a4a4a; /* رمادي غامق */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .about-section p {
+            font-size: 1.2em;
+            color: #666; /* رمادي متوسط */
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .team-member {
+            width: 250px;
+            background-color: #f0f0f0; /* رمادي فاتح */
+            border-radius: 8px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member h3 {
+            color: #4a4a4a; /* رمادي غامق */
+            font-size: 1.5em;
+            margin: 15px 0 10px;
+        }
+
+        .team-member p {
+            color: #666; /* رمادي متوسط */
+            font-size: 1em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- القسم الرئيسي -->
+        <section class="hero-section" id="home">
+            <h1 class="floating">Welcome to Our Team</h1>
+            <p>We are a team of skilled developers passionate about delivering innovative and effective software solutions. Our mission is to enhance digital experiences and create engaging platforms through modern technologies and design.</p>
+            <button onclick="navigateToSection('about')">Learn More</button>
+        </section>
+
+        <!-- قسم الفريق -->
+        <section class="about-section" id="about">
+            <h1>Meet Our Team</h1>
+            <p>We are a diverse team with expertise in various fields of development, striving to deliver excellence in every project.</p>
+            <div class="team-members">
+                <div class="team-member">
+                    <h3>Ghram</h3>
+                    <p>Web Developer</p>
+                </div>
+                <div class="team-member">
+                    <h3>Maram</h3>
+                    <p>Frontend Specialist</p>
+                </div>
+                <div class="team-member">
+                    <h3>Noura</h3>
+                    <p>Mobile App Developer</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Creative Developers &copy; 2024 - All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function navigateToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
